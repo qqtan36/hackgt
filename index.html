@@ -1,0 +1,81 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>
+            Emotibank
+        </title>
+        <link rel="stylesheet" href="assets/css/main.css">
+        <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+        <script src="https://code.jquery.com/jquery-3.1.0.slim.min.js" integrity="sha256-cRpWjoSOw5KcyIOaZNo4i6fZ9tKPhYYb6i5T9RSVJG8=" crossorigin="anonymous"></script>  
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-                    Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+    </head>
+
+    <body>
+        <div class="page-header">
+            <h1>Capital One Emotional Banking</h1>
+        </div>
+        <div class="toggle">
+            <!--
+<button id="toggle" type="button" class="btn btn-primary" data-toggle="button">
+Emotion Toggle
+</button>
+-->
+            <video autoplay="true" id="cameraPreview"><a id="toggle" ref="#"></a></video>
+        </div>
+
+        <div id="status" class="alert alert-info" role="alert">
+            Emotion capture mode on. Please hold your emotion for a few seconds.
+        </div>
+        <div id="notifications">
+        </div>
+
+        <div class="container emotipanel">
+            <span class="deposit">
+                <i class="fa fa-smile-o fa-4x"><figcaption>Deposit</figcaption></i>
+            </span>
+            <span class="billpay">
+                <i class="fa fa-frown-o fa-4x"><figcaption>Pay Bills</figcaption></i>
+            </span>
+            <span class="transactions">
+                <i class="fa fa-meh-o fa-4x"><figcaption>View Transactions</figcaption></i>
+            </span>            
+
+        </div>
+        <div class="popupnotif">
+        </div>
+
+        <div id="balance">
+            <div class="header"></div>
+            <div>
+                <span class="transactions"><a></a></span>
+                <span class="acctbalance"></span>
+            </div>
+        </div>
+
+        <script>
+            // Grab elements, create settings, etc.
+            var video = document.getElementById('cameraPreview');
+
+            // Get access to the camera!
+            if(navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+                // Not adding `{ audio: true }` since we only want video now
+                navigator.mediaDevices.getUserMedia({ video: true }).then(function(stream) {
+                    video.src = window.URL.createObjectURL(stream);
+                    video.play();
+                });
+            }
+        </script>
+    </body>
+
+
+</html>
