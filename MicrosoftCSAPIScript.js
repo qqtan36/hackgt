@@ -54,6 +54,7 @@ function findHighestRatingAndCallMethod(givenArrayOfRatings) {
             break;
         case 6:
             console.log("sadess detected")
+            payBillAPI()
             //call sadness here
             break;
         default:
