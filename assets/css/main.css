@@ -22,10 +22,14 @@ body, input, select, textarea {
 body{
     width: 70%;
     position: absolute;
-  left: 20%;
+  left: 15%;
   margin-left: auto;
   margin-right: auto;
   
+}
+
+body div {
+    padding-left: 30%;
 }
 #status{
     visibility: hidden;
@@ -51,4 +55,8 @@ figcaption{
     font-size: 7pt;
     margin-top: 10px;
    
+}
+
+table{
+    width: 20%;
 }
