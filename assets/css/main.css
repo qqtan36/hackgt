@@ -1,16 +1,54 @@
+@import url("http://fonts.googleapis.com/css?family=Source+Sans+Pro:300");
+
+a{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    /*		font: inherit;  */
+    vertical-align: baseline;
+}
+
+body, input, select, textarea {
+    color: #ffffff;
+    font-family: "Source Sans Pro", Helvetica, sans-serif;
+    font-size: 14pt;
+    font-weight: 350;
+    line-height: 2;
+    letter-spacing: 0.2em;
+    
+}
+
+body{
+    width: 70%;
+    position: absolute;
+  left: 20%;
+  margin-left: auto;
+  margin-right: auto;
+  
+}
 #status{
     visibility: hidden;
     text-align: center;
 }
 
 .toggle {
-    margin: 0px auto;
-    width: 500px;
-    height: 375px;
-    border: 10px #333 solid;
+    
 }
 #cameraPreview {
-    width: 500px;
-    height: 375px;
+    width: 15%; /* 20% of the viewport width */
+    height: 80%;
     background-color: #666;
+    display: inline-block;
+    margin: 0 auto;
+    border-radius: 50%;
+    box-shadow: 0 0 0 0.25em #ffffff;
+    transition: all .2s ease-in-out;
+    text-align: center;
+    
+}
+figcaption{
+    font-size: 7pt;
+    margin-top: 10px;
+   
 }
