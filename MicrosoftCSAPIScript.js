@@ -47,11 +47,10 @@ function findHighestRatingAndCallMethod(givenArrayOfRatings) {
             break;
         case 4:
             console.log("happiness detected")
-            //call happiness here
+            makeADeposit()
             break;
         case 5:
             console.log("neutral detected")
-            //call neutral here
             break;
         case 6:
             console.log("sadess detected")
