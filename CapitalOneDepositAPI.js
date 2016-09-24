@@ -1,12 +1,13 @@
 function makeADeposit() {
 
-    var amountToBeDeposited = transactionAmount
+    //var amountToBeDeposited = transactionAmount
+    var amountToBeDeposited = 2.00
     var date = new Date();
     var transactionDate = date.getFullYear() + date.getMonth() + date.getDate()
     var apiDataObject = {
         "medium": "balance",
-        "transaction_date": transactionDate
-        "amount": amountToBeDeposited
+        "transaction_date": transactionDate,
+        "amount": amountToBeDeposited,
         "description": "Automated With Emotional Banking"
     }
 
