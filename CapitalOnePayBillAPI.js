@@ -1,18 +1,18 @@
-function makeADeposit() {
+function payBillAPI() {
 
-    //var amountToBeDeposited = transactionAmount
-    var amountToBeDeposited = 2.00
+    var amountToBePaid = 20.00
     var date = new Date();
     var transactionDate = date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + date.getDate()
     var apiDataObject = {
         "medium": "balance",
+        "payee_id": "57e6e88fdbd835571461257d",
         "transaction_date": transactionDate,
-        "amount": amountToBeDeposited,
+        "amount": amountToBePaid,
         "description": "Automated With Emotional Banking"
     }
 
     $.ajax({
-        url: "http://api.reimaginebanking.com/accounts/57e6c723dbd835571461253f/deposits?key=e2352ee557f1453da0a2eb28fbc5c5a7",
+        url: "http://api.reimaginebanking.com/accounts/57e6c723dbd835571461253f/transfers?key=e2352ee557f1453da0a2eb28fbc5c5a7",
         async: true,
         beforeSend: function(xhrObj){
             // Request headers

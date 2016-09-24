@@ -62,3 +62,5 @@ function findHighestRatingAndCallMethod(givenArrayOfRatings) {
             break;
     }
 }
+
+//$(document).ready(initiateEmotionDectectionAPI())
