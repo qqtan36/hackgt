@@ -20,7 +20,7 @@ function updateCameraStatusLabelToTrue() {
 
 //take picture of the user
 function takePicOfTheUser() {
-    console.log("headklm")
+    function take_snapshot()
 
 }
 
