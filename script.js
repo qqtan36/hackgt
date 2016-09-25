@@ -20,8 +20,4 @@ function updateCameraStatusLabelToTrue() {
 
 //take picture of the user
 function takePicOfTheUser() {
-    function take_snapshot()
-
 }
-
-$("#submit").click(takePicOfTheUser)
