@@ -3,8 +3,8 @@ var imageuri = ""
 
 //parse the dollar amount in the transaction amount textfield
 function parseTextField() {
-    var amountText = document.getElementById("deposit").value
-    transactionAmount = parseFloat(amountText)
+    var amountText = document.getElementById("deposit").value;
+    transactionAmount = parseFloat(amountText);
 
     initiateEmotionDectectionAPI();
 }
@@ -45,9 +45,12 @@ function updateBalanceLabel() {
     .fail(function() {
         console.log("error in updatingBalanceLabel");
     });
+
 }
 
 function repeatLabelUpdating() {
-    setInterval(updateBalanceLabel, 6000)
+  transactionConfirmLoop();
+  updateBalanceLabel();
+  setInterval(updateBalanceLabel, 6000);
 }
 $(document).ready(repeatLabelUpdating)

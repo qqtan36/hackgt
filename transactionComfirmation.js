@@ -1,13 +1,13 @@
 var accountID = Cookies.get("accountID");
 var lastConfirmedIdx = Cookies.get("lastConfirmedIdx"); //index of last confirmed transaction
-var suspiciousList = Cookies.get("suspiciousList");
+var suspiciousList = {};
 var APIKEY_APPEND = "?key=e2352ee557f1453da0a2eb28fbc5c5a7";
 var URL_HEAD = "http://api.reimaginebanking.com/";
 var accountObj;
 var purchasesObj;
 
 function GetAccount(id) {
-  var builtURL = URL_HEAD + "accounts/" + id + "/customer" + APIKEY_APPEND;
+  var builtURL = URL_HEAD + "accounts/" + id + APIKEY_APPEND;
   var found = -1; //0=not found, 1=found, -1=answer not yet arrived
   $.ajax({type: "GET",
         url : builtURL,
@@ -56,6 +56,8 @@ function CheckAccount() {
     }
    }
  }
+
+  GetAccount(accountID);
 }
 
 function CancelPurchase(id) {
@@ -75,7 +77,7 @@ function CancelPurchase(id) {
 
   //put on suspiciousList
   suspiciousList.push(id);
-  Cookies.set("suspiciousList", suspiciousList, {Path: "/", expires: 2147483647 });
+  Cookies.set("suspiciousList", JSON.stringify(suspiciousList), {Path: "/", expires: 2147483647 });
 }
 
 function CheckTransactionLoop() {
@@ -118,9 +120,14 @@ function CheckTransactionLoop() {
 }
 
 function transactionConfirmLoop() {
-  if (typeof suspiciousList === 'undefined')
+
+  if (typeof Cookies.get("suspiciousList") === 'undefined') {
     suspiciousList = {};
+  } else {
+    suspiciousList = $.parseJSON(Cookies.get("suspiciousList"));
+  }
 
   CheckAccount();
+  $("#acc_type").html(accountObj.type);
   CheckTransactionLoop();
 }
