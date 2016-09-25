@@ -3,7 +3,7 @@ var imageuri = ""
 
 //parse the dollar amount in the transaction amount textfield
 function parseTextField() {
-    transactionAmount = parseFloat(textField).toFix(2);
+    transactionAmount = parseFloat($("#deposit").text()).toFix(2);
     initiateEmotionDectectionAPI();
 }
 
