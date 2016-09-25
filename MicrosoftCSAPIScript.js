@@ -9,7 +9,8 @@ function initiateEmotionDectectionAPI() {
         },
         type: "POST",
         // Request body
-        data: "{'url': 'https://i.imgur.com/pbb73Gs.jpg'}",
+        //data: "{'url': 'https://i.imgur.com/pbb73Gs.jpg'}",
+        data: "{'url':" + imageuri + "}"
     })
     .done(function(data) {
         extractResponseData(data)
