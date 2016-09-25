@@ -47,6 +47,6 @@ function updateBalanceLabel() {
 }
 
 function repeatLabelUpdating() {
-    setInterval(updateBalanceLabel, 60000)
+    setInterval(updateBalanceLabel, 6000)
 }
 $(document).ready(repeatLabelUpdating)
