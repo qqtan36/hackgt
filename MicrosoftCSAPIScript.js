@@ -4,13 +4,15 @@ function initiateEmotionDectectionAPI() {
         async: true,
         beforeSend: function(xhrObj){
             // Request headers
-            xhrObj.setRequestHeader("Content-Type","application/json");
+            //xhrObj.setRequestHeader("Content-Type","application/json");
+            xhrObj.setRequestHeader("Content-Type","application/octet-stream");
             xhrObj.setRequestHeader("Ocp-Apim-Subscription-Key","8b410633f4c54e9ca89fbb20138254a3");
         },
         type: "POST",
         // Request body
         //data: "{'url': 'https://i.imgur.com/pbb73Gs.jpg'}",
-        data: "{'url':" + imageuri + "}"
+        //data: "{'url':" + imageuri + "}"
+        data: imageuri,
     })
     .done(function(data) {
         extractResponseData(data)
