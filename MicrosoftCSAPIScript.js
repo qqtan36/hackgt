@@ -15,7 +15,7 @@ function initiateEmotionDectectionAPI() {
         extractResponseData(data)
     })
     .fail(function() {
-        alert("error");
+        console.log("error in microsoftCSAPIScript");
     });
 }
 
