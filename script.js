@@ -39,7 +39,7 @@ function updateBalanceLabel() {
     })
     .done(function(data) {
         var userBalance = data[0]["balance"].toFixed(2);
-        $.find(".table-bordered").find("td:eq(1)").text(userBalance)
+        $.find(".table-bordered").find("td").eq(1).text(userBalance)
     })
     .fail(function() {
         console.log("error in updatingBalanceLabel");
@@ -47,6 +47,6 @@ function updateBalanceLabel() {
 }
 
 function repeatLabelUpdating() {
-    setInterval(updateBalanceLabel)
+    setInterval(updateBalanceLabel, 60000)
 }
 $(document).ready(repeatLabelUpdating)
