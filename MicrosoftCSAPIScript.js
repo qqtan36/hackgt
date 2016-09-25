@@ -46,7 +46,8 @@ function dataURItoBlob(dataURI) {
 }
 
 function extractResponseData(unparsedResponseJson) {
-    var extractedData = unparsedResponseJson[0]["scores"];
+    var parsedJson = JSON.parse(unparsedResponseJson)
+    var extractedData = parsedJson[0]["scores"];
     var resultArray = [];
 
     for(key in extractedData) {
