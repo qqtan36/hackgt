@@ -59,7 +59,7 @@ function findHighestRatingAndCallMethod(givenArrayOfRatings) {
             break;
         default:
             console.log("non default facing expression detected")
-            //call non default here
+            jAlert('Try taking picture again', 'Alert Dialog');
             break;
     }
 }
