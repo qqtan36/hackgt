@@ -39,7 +39,7 @@ function updateBalanceLabel() {
     })
     .done(function(data) {
         var userBalance = data[0]["balance"].toFixed(2);
-        $(document).find(".table-bordered").find("#balance").text(userBalance);
+        $(document).find(".table-bordered").find("#balance").text("$"+userBalance);
     })
     .fail(function() {
         console.log("error in updatingBalanceLabel");
