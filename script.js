@@ -17,5 +17,8 @@ function updateCameraStatusLabelToTrue() {
 
 //take picture of the user
 function takePicOfTheUser() {
-
+    console.log("headklm")
+    
 }
+
+$("#submit").click(takePicOfTheUser)
