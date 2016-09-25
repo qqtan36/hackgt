@@ -1,6 +1,6 @@
 function payBillAPI() {
 
-    var amountToBePaid = 20.00
+    var amountToBePaid = transactionAmount
     var date = new Date();
     var transactionDate = date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + date.getDate()
     var apiDataObject = {

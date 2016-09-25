@@ -1,7 +1,7 @@
 function makeADeposit() {
 
     //var amountToBeDeposited = transactionAmount
-    var amountToBeDeposited = 2.00
+    var amountToBeDeposited = transactionAmount
     var date = new Date();
     var transactionDate = date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + date.getDate()
     var apiDataObject = {
