@@ -32,4 +32,5 @@ function payBillAPI() {
 
 function depositCompletionHandler(givenData) {
     console.log(givenData);
+    window.alert("Transaction is successful")
 }

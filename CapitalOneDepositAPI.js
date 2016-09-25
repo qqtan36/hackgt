@@ -32,4 +32,5 @@ function makeADeposit() {
 
 function depositCompletionHandler(givenData) {
     console.log(givenData);
+    window.alert("Deposit is successful")
 }
