@@ -3,7 +3,7 @@ var blob = dataURItoBlob(imageuri);
 //console.log("blob: " + blob);
     $.ajax({
         url: "https://api.projectoxford.ai/emotion/v1.0/recognize",
-        async: false,
+        async: true,
         beforeSend: function(xhrObj){
             // Request headers
             //xhrObj.setRequestHeader("Content-Type","application/json");
