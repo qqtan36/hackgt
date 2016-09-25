@@ -42,7 +42,6 @@ function dataURItoBlob(dataURI) {
     }
 
     return new Blob([ia], {type:'application/octet-stream'});
-
 }
 
 function extractResponseData(unparsedResponseJson) {
@@ -67,10 +66,6 @@ function findHighestRatingAndCallMethod(givenArrayOfRatings) {
     }
 
     switch (givenArrayOfRatings.indexOf(highestRating)) {
-        case 0:
-            console.log("anger detected")
-            //call anger here
-            break;
         case 4:
             console.log("happiness detected")
             makeADeposit()
@@ -81,11 +76,10 @@ function findHighestRatingAndCallMethod(givenArrayOfRatings) {
         case 6:
             console.log("sadess detected")
             payBillAPI()
-            //call sadness here
             break;
         default:
             console.log("non default facing expression detected")
-            jAlert('Try taking picture again', 'Alert Dialog');
+            window.alert("Try taking picture again");
             break;
     }
 }
