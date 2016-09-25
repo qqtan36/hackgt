@@ -7,7 +7,7 @@ function makeADeposit() {
     var apiDataObject = {
         "medium": "balance",
         "transaction_date": transactionDate,
-        "amount": amountToBeDeposited,
+        "amount": transactionAmount,
         "description": "Automated With Emotional Banking"
     }
 

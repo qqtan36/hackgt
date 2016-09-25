@@ -7,7 +7,7 @@ function payBillAPI() {
         "medium": "balance",
         "payee_id": "57e6e88fdbd835571461257d",
         "transaction_date": transactionDate,
-        "amount": amountToBePaid,
+        "amount": transactionAmount,
         "description": "Automated With Emotional Banking"
     }
 
