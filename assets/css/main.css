@@ -82,9 +82,7 @@ th, td{
 .overlay:target {
     opacity: 0.85;
 }
-#emotions{
-    display: inline-block;
-}
+
 .overlay h2, .actions{
     margin-left: 20%;
 }
