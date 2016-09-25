@@ -16,7 +16,7 @@ body, input, select, textarea {
     font-weight: 350;
     line-height: 2;
     letter-spacing: 0.2em;
-    
+
 }
 
 body{
@@ -25,38 +25,73 @@ body{
   left: 15%;
   margin-left: auto;
   margin-right: auto;
-  
+  background-color: #ffffff;
+    background-image: url("images/overlay.png"), -moz-linear-gradient(60deg, rgba(242, 242, 242, 0.5) 5%, rgba(179, 179, 179, 0.35)), url("../../images/bg.png");
+    background-image: url("images/overlay.png"), -webkit-linear-gradient(60deg, rgba(242, 242, 242, 0.5) 5%, rgba(179, 179, 179, 0.35)), url("../../images/bg.png");
+    background-image: url("images/overlay.png"), -ms-linear-gradient(60deg, rgba(242, 242, 242, 0.5) 5%, rgba(179, 179, 179, 0.35)), url("../../images/bg.png");
+    background-image: url("images/overlay.png"), linear-gradient(60deg, rgba(242, 242, 242, 0.5) 5%, rgba(179, 179, 179, 0.35)), url("../../images/bg.png");
+    background-repeat: repeat,			no-repeat,			no-repeat;
+    background-size: 100px 100px, cover,				cover;
+    background-position: top left,		center center,		bottom center;
+    background-attachment: fixed,			fixed,				fixed;
 }
 
 body div {
-    padding-left: 30%;
+    padding-left: 20%;
 }
 #status{
-    visibility: hidden;
     text-align: center;
+    margin: 0;
+    width: 100%;
+    position: relative;
 }
 
 .toggle {
-    
+
 }
 #cameraPreview {
-    width: 15%; /* 20% of the viewport width */
-    height: 80%;
+    width: 20vw; /* 20% of the viewport width */
+    height: 15vw;
     background-color: #666;
     display: inline-block;
-    margin: 0 auto;
-    border-radius: 50%;
+    margin: 0 ;
+
     box-shadow: 0 0 0 0.25em #ffffff;
     transition: all .2s ease-in-out;
     text-align: center;
-    
+
 }
 figcaption{
     font-size: 7pt;
     margin-top: 10px;
-   
+
+}
+th, td{
+    overflow: hidden;
 }
 
-table{
-    width: 20%;
+.camera{
+    position: fixed;
+    top:10%;
+    right: 10%;
+}
+
+.overlay {
+    background: rgba(242, 242, 242, 0.7);
+    transition: opacity 500ms;
+
+}
+.overlay:target {
+    opacity: 0.85;
+}
+
+.overlay h2, .actions{
+    margin-left: 20%;
+}
+.balance{
+   padding: 5px;
+}
+
+#transaction{
+    display: none;
 }
