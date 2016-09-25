@@ -23,6 +23,7 @@ function takePicOfTheUser() {
 }
 
 function updateBalanceLabel() {
+    console.log("updating userBalance")
     $.ajax({
         url: "http://api.reimaginebanking.com/accounts?type=Checking&key=e2352ee557f1453da0a2eb28fbc5c5a7",
         async: true,
@@ -44,3 +45,8 @@ function updateBalanceLabel() {
         console.log("error in updatingBalanceLabel");
     });
 }
+
+function repeatLabelUpdating() {
+    setInterval(updateBalanceLabel)
+}
+$(document).ready(repeatLabelUpdating)
